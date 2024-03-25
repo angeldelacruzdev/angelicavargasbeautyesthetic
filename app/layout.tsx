@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -8,12 +9,6 @@ import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Angelica Vargas Beauty Aesthetic",
-  description:
-    "Beauty Angelica Vargas Aesthetic  dedicada a ofrecer servicios de estética y cuidado personal de alta calidad. Nuestro objetivo es realzar la belleza natural de nuestros clientes mediante tratamientos especializados y personalizados.",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,6 +17,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>Angelica Vargas Beauty Aesthetic</title>
+
+        <meta
+          name="description"
+          content=" Beauty Angelica Vargas Aesthetic  dedicada a ofrecer servicios de estética y cuidado personal de alta calidad. Nuestro objetivo es realzar la belleza natural de nuestros clientes mediante tratamientos especializados y personalizados."
+        />
+
         <link
           rel="apple-touch-icon"
           sizes="180x180"
