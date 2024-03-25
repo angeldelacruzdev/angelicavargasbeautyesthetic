@@ -1,3 +1,5 @@
+'use client'
+
 import { ShoppingCartIcon, StarIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
 import Link from "next/link";
