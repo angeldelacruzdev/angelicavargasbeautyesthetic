@@ -1,5 +1,21 @@
+import { Metadata } from "next";
 import Link from "next/link";
+import { CardItem } from "./components/CardItem";
 
+export const metadata: Metadata = {
+  title: "Angelica Vargas Beauty Aesthetic",
+  description:
+    "Dedicada a ofrecer servicios de estética y cuidado personal de alta calidad. Nuestro objetivo es realzar la belleza natural de nuestros clientes mediante tratamientos especializados y personalizados.",
+  authors: [{ name: "Angel De La Cruz", url: "soft2now.com" }],
+  icons: [
+    { rel: "icon", url: "/favicon-32x32.png", sizes: "32x32" },
+    { rel: "apple-touch-icon", url: "/apple-touch-icon.png", sizes: "180x180" },
+    { rel: "apple-touch-icon", url: "/favicon-32x32.png", sizes: "32x32" },
+  ],
+  manifest: "/site.webmanifest",
+  assets:
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css",
+};
 export default function Home() {
   return (
     <main>
@@ -25,6 +41,12 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </div>
+      <div className="grid grid-flow-col">
+        <CardItem />
+        <CardItem />
+        <CardItem />
+        <CardItem />
       </div>
     </main>
   );
